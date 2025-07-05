@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Client - Intacct Implementation</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/create-client.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="../assets/images/logo.png" alt="Intacct Implementation Logo" class="logo">
+        <h1>Intacct Implementation Project Tracker</h1>
+    </header>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-item dropdown">
+                <button class="nav-button active" data-submenu="project-tracker">
+                    <i class="icon">📊</i>
+                    Project Tracker
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="submenu show" id="project-tracker">
+                    <a href="#create-client" class="active">Create Client</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="#project-status">Project Status</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <button class="nav-button" data-submenu="migration-activities">
+                    <i class="icon">📋</i>
+                    Migration Activities & Update Track Sheet
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="submenu" id="migration-activities">
+                    <a href="#data-migration">Data Migration</a>
+                    <a href="#configuration">Configuration</a>
+                    <a href="#testing">Testing</a>
+                    <a href="#training">Training</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <button class="nav-button" data-submenu="migration-tools">
+                    <i class="icon">🛠️</i>
+                    Tools for Migration Activities
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="submenu" id="migration-tools">
+                    <a href="#opening-balance" class="inactive-link">Opening Balance Initiate</a>
+                    <a href="#trial-balance-migration" class="inactive-link">Trial Balance Migration</a>
+                    <a href="#gl-transactions" class="inactive-link">GL Transactions Migration</a>
+                    <a href="#trial-balance-validation" class="inactive-link">Trial Balance Validation</a>
+                    <a href="#dimension-validation" class="inactive-link">Dimension wise TB Validation</a>
+                    <a href="https://analytixonline.sharepoint.com/:u:/r/sites/FinanceAccounts/ACCTSTeam15%20%20Nikhil/SAGE%20Intacct%20Implementation/Sage%20Implementation/Z%20Madhav/AUTOMATION%20BY%20MR/MDM_Excel_Automation.html?csf=1&web=1&e=Ho8pq1" target="_blank">MDM Mapping</a>
+                    <a href="https://analytixonline.sharepoint.com/:u:/r/sites/FinanceAccounts/ACCTSTeam15%20%20Nikhil/SAGE%20Intacct%20Implementation/Sage%20Implementation/Z%20Madhav/AUTOMATION%20BY%20MR/Bank_GJ_Entry_Tool%20Ver%201.2.html?csf=1&web=1&e=p405GI" target="_blank">Banking GJ Entry Generation</a>
+                    <a href="https://analytixonline-my.sharepoint.com/personal/madhusudan_rupala_analytix_com/SitePages/Standard-Operating-Procedures-(SOPs).aspx" target="_blank">SOP</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="main-content">
+        <div class="form-container">
+            <h2 class="form-title">🏢 Create New Client</h2>
+            <form id="clientForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="clientName" class="form-label">Client Name *</label>
+                        <input type="text" id="clientName" name="clientName" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="noOfEntities" class="form-label">Number of Entities *</label>
+                        <input type="number" id="noOfEntities" name="noOfEntities" class="form-input" min="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="goLiveDate" class="form-label">Go Live Date *</label>
+                        <input type="date" id="goLiveDate" name="goLiveDate" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="legacySystemName" class="form-label">Legacy System Name *</label>
+                        <input type="text" id="legacySystemName" name="legacySystemName" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="accessAvailable" class="form-label">Access Available? *</label>
+                        <select id="accessAvailable" name="accessAvailable" class="form-select" required>
+                            <option value="">Select...</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fiscalYear" class="form-label">Fiscal Year *</label>
+                        <select id="fiscalYear" name="fiscalYear" class="form-select" required>
+                            <option value="">Select Fiscal Year...</option>
+                            <option value="jan-dec">January to December</option>
+                            <option value="feb-jan">February to January</option>
+                            <option value="mar-feb">March to February</option>
+                            <option value="apr-mar">April to March</option>
+                            <option value="may-apr">May to April</option>
+                            <option value="jun-may">June to May</option>
+                            <option value="jul-jun">July to June</option>
+                            <option value="aug-jul">August to July</option>
+                            <option value="sep-aug">September to August</option>
+                            <option value="oct-sep">October to September</option>
+                            <option value="nov-oct">November to October</option>
+                            <option value="dec-nov">December to November</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Migration Period -->
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="migrationFromDate" class="form-label">Migration Period - From Date *</label>
+                        <input type="date" id="migrationFromDate" name="migrationFromDate" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="migrationToDate" class="form-label">Migration Period - To Date *</label>
+                        <input type="date" id="migrationToDate" name="migrationToDate" class="form-input" required>
+                    </div>
+                </div>
+
+                <!-- Trial Balance Migration -->
+                <div class="form-group">
+                    <label for="trialBalanceYears" class="form-label">Trial Balance Migration (Years) *</label>
+                    <select id="trialBalanceYears" name="trialBalanceYears" class="form-select" required>
+                        <option value="">Select Years...</option>
+                        <option value="0">0 Years</option>
+                        <option value="1">1 Year</option>
+                        <option value="2">2 Years</option>
+                        <option value="3">3 Years</option>
+                        <option value="4">4 Years</option>
+                        <option value="5">5 Years</option>
+                    </select>
+                </div>
+
+                <!-- Trial Balance Years Details -->
+                <div id="trialBalanceDetails" class="hidden">
+                    <h3 style="color: var(--electrolux-blue); margin: 1.5rem 0 1rem 0;">📊 Trial Balance Migration Years</h3>
+                    <div class="fiscal-year-note">
+                        <strong>📅 Date Calculation:</strong> Dates are calculated based on your selected fiscal year (proper 365-day periods). 
+                        You can edit these dates manually if needed. The system automatically calculates fiscal year-end dates.
+                    </div>
+                    <div id="trialBalanceYearsList"></div>
+                </div>
+
+                <!-- GL Transaction Migration -->
+                <div class="form-group">
+                    <label for="glTransactionYears" class="form-label">GL Transaction Migration (Years) *</label>
+                    <select id="glTransactionYears" name="glTransactionYears" class="form-select" required>
+                        <option value="">Select Years...</option>
+                        <option value="0">0 Years</option>
+                        <option value="1">1 Year</option>
+                        <option value="2">2 Years</option>
+                        <option value="3">3 Years</option>
+                        <option value="4">4 Years</option>
+                        <option value="5">5 Years</option>
+                    </select>
+                </div>
+
+                <!-- GL Transaction Years Details -->
+                <div id="glTransactionDetails" class="hidden">
+                    <h3 style="color: var(--electrolux-blue); margin: 1.5rem 0 1rem 0;">💾 GL Transaction Migration Years</h3>
+                    <div class="fiscal-year-note">
+                        <strong>📅 Date Calculation:</strong> GL Transaction dates start after Trial Balance Migration ends. 
+                        All dates follow proper 365-day fiscal year calculations and are fully editable.
+                    </div>
+                    <div id="glTransactionYearsList"></div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary">
+                        💾 Save
+                    </button>
+                    <button type="button" id="saveAndUpdateTracker" class="btn btn-success">
+                        🔄 Save and Update Tracker
+                    </button>
+                    <button type="button" id="saveAndPreCheck" class="btn btn-secondary" disabled>
+                        ✅ Save and Pre Checking
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Intacct Implementation Project Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>

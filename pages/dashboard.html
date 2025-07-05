@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Intacct Implementation</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/dashboard.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="../assets/images/logo.png" alt="Intacct Implementation Logo" class="logo">
+        <h1>Intacct Implementation Project Tracker</h1>
+    </header>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-item dropdown">
+                <button class="nav-button active" data-submenu="project-tracker">
+                    <i class="icon">📊</i>
+                    Project Tracker
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="submenu show" id="project-tracker">
+                    <a href="create-client.html">Create Client</a>
+                    <a href="#dashboard" class="active">Dashboard</a>
+                    <a href="project-status.html">Project Status</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <button class="nav-button" data-submenu="migration-activities">
+                    <i class="icon">📋</i>
+                    Migration Activities & Update Track Sheet
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="submenu" id="migration-activities">
+                    <a href="#data-migration">Data Migration</a>
+                    <a href="#configuration">Configuration</a>
+                    <a href="#testing">Testing</a>
+                    <a href="#training">Training</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <button class="nav-button" data-submenu="migration-tools">
+                    <i class="icon">🛠️</i>
+                    Tools for Migration Activities
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="submenu" id="migration-tools">
+                    <a href="#opening-balance" class="inactive-link">Opening Balance Initiate</a>
+                    <a href="#trial-balance-migration" class="inactive-link">Trial Balance Migration</a>
+                    <a href="#gl-transactions" class="inactive-link">GL Transactions Migration</a>
+                    <a href="#trial-balance-validation" class="inactive-link">Trial Balance Validation</a>
+                    <a href="#dimension-validation" class="inactive-link">Dimension wise TB Validation</a>
+                    <a href="https://analytixonline.sharepoint.com/:u:/r/sites/FinanceAccounts/ACCTSTeam15%20%20Nikhil/SAGE%20Intacct%20Implementation/Sage%20Implementation/Z%20Madhav/AUTOMATION%20BY%20MR/MDM_Excel_Automation.html?csf=1&web=1&e=Ho8pq1" target="_blank">MDM Mapping</a>
+                    <a href="https://analytixonline.sharepoint.com/:u:/r/sites/FinanceAccounts/ACCTSTeam15%20%20Nikhil/SAGE%20Intacct%20Implementation/Sage%20Implementation/Z%20Madhav/AUTOMATION%20BY%20MR/Bank_GJ_Entry_Tool%20Ver%201.2.html?csf=1&web=1&e=p405GI" target="_blank">Banking GJ Entry Generation</a>
+                    <a href="https://analytixonline-my.sharepoint.com/personal/madhusudan_rupala_analytix_com/SitePages/Standard-Operating-Procedures-(SOPs).aspx" target="_blank">SOP</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="main-content">
+        <div class="form-container">
+            <h2 class="form-title">📊 Project Dashboard</h2>
+            
+            <!-- Search and Filter Section -->
+            <div class="dashboard-controls">
+                <div class="search-container">
+                    <input type="text" id="searchClients" placeholder="Search clients..." class="form-input">
+                </div>
+                <div class="filter-container">
+                    <select id="statusFilter" class="form-select">
+                        <option value="">All Statuses</option>
+                        <option value="Completed">Completed</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Hold">On Hold</option>
+                        <option value="Yet to start">Yet to Start</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Projects Table -->
+            <div class="table-container">
+                <table id="clientsTable" class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>No of Entities</th>
+                            <th>Go Live Date</th>
+                            <th>Legacy System</th>
+                            <th>Access Available</th>
+                            <th>Opening Balance</th>
+                            <th>Trial Balance Migration</th>
+                            <th>GL Transaction Migration</th>
+                            <th>Validation</th>
+                            <th>Open Items</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clientsTableBody">
+                        <!-- Table rows will be dynamically populated -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state hidden">
+                <div class="empty-state-icon">📊</div>
+                <h3>No Projects Found</h3>
+                <p>Start by creating your first client project.</p>
+                <a href="create-client.html" class="btn btn-primary">Create Client</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Intacct Implementation Project Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>

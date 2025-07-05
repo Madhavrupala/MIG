@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intacct Implementation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="assets/images/logo.png" alt="Intacct Implementation Logo" class="logo">
+        <h1>Intacct Implementation Project Tracker</h1>
+    </header>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-item dropdown">
+                <button class="nav-button" data-submenu="project-tracker">
+                    <i class="icon">📊</i>
+                    Project Tracker
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="submenu" id="project-tracker">
+                    <a href="#create-client">Create Client</a>
+                    <a href="pages/dashboard.html">Dashboard</a>
+                    <a href="#project-status">Project Status</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <button class="nav-button" data-submenu="migration-activities">
+                    <i class="icon">📋</i>
+                    Migration Activities & Update Track Sheet
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="submenu" id="migration-activities">
+                    <a href="#data-migration">Data Migration</a>
+                    <a href="#configuration">Configuration</a>
+                    <a href="#testing">Testing</a>
+                    <a href="#training">Training</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <button class="nav-button" data-submenu="migration-tools">
+                    <i class="icon">🛠️</i>
+                    Tools for Migration Activities
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="submenu" id="migration-tools">
+                    <a href="#opening-balance" class="inactive-link">Opening Balance Initiate</a>
+                    <a href="#trial-balance-migration" class="inactive-link">Trial Balance Migration</a>
+                    <a href="#gl-transactions" class="inactive-link">GL Transactions Migration</a>
+                    <a href="#trial-balance-validation" class="inactive-link">Trial Balance Validation</a>
+                    <a href="#dimension-validation" class="inactive-link">Dimension wise TB Validation</a>
+                    <a href="https://analytixonline.sharepoint.com/:u:/r/sites/FinanceAccounts/ACCTSTeam15%20%20Nikhil/SAGE%20Intacct%20Implementation/Sage%20Implementation/Z%20Madhav/AUTOMATION%20BY%20MR/MDM_Excel_Automation.html?csf=1&web=1&e=Ho8pq1" target="_blank">MDM Mapping</a>
+                    <a href="https://analytixonline.sharepoint.com/:u:/r/sites/FinanceAccounts/ACCTSTeam15%20%20Nikhil/SAGE%20Intacct%20Implementation/Sage%20Implementation/Z%20Madhav/AUTOMATION%20BY%20MR/Bank_GJ_Entry_Tool%20Ver%201.2.html?csf=1&web=1&e=p405GI" target="_blank">Banking GJ Entry Generation</a>
+                    <a href="https://analytixonline-my.sharepoint.com/personal/madhusudan_rupala_analytix_com/SitePages/Standard-Operating-Procedures-(SOPs).aspx" target="_blank">SOP</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h2>Welcome to the Intacct Implementation Project Tracker</h2>
+                <p>Streamline your Intacct implementation with our comprehensive project tracking and migration tools.</p>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <span class="stat-icon">📊</span>
+                <div class="stat-number" id="totalProjects">15</div>
+                <div class="stat-label">Total Projects</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">✅</span>
+                <div class="stat-number" id="completedProjects">8</div>
+                <div class="stat-label">Completed Projects</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🔄</span>
+                <div class="stat-number" id="inProgressProjects">4</div>
+                <div class="stat-label">In Progress</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">⏸️</span>
+                <div class="stat-number" id="holdProjects">2</div>
+                <div class="stat-label">On Hold</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">⏳</span>
+                <div class="stat-number" id="yetToStartProjects">1</div>
+                <div class="stat-label">Yet to Start</div>
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="chart-section">
+            <div class="chart-header">
+                <h3 class="chart-title">Project Status Overview</h3>
+            </div>
+            <div class="chart-container">
+                <canvas id="projectChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+        <div class="feature-cards">
+            <div class="card">
+                <div class="card-icon">�</div>
+                <h3>Project Tracking</h3>
+                <p>Monitor progress, milestones, and deliverables in real-time</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <h3>Migration Management</h3>
+                <p>Organize and track all migration activities efficiently</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+                <h3>Migration Tools</h3>
+                <p>Access powerful tools to streamline your migration process</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Intacct Implementation Project Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>

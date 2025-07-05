@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Status - Intacct Implementation</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/project-status.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="../assets/images/logo.png" alt="Intacct Implementation Logo" class="logo">
+        <h1>Intacct Implementation Project Tracker</h1>
+    </header>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-item dropdown">
+                <button class="nav-button active" data-submenu="project-tracker">
+                    <i class="icon">📊</i>
+                    Project Tracker
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="submenu show" id="project-tracker">
+                    <a href="create-client.html">Create Client</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="#project-status" class="active">Project Status</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <button class="nav-button" data-submenu="migration-activities">
+                    <i class="icon">📋</i>
+                    Migration Activities & Update Track Sheet
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="submenu" id="migration-activities">
+                    <a href="#data-migration">Data Migration</a>
+                    <a href="#configuration">Configuration</a>
+                    <a href="#testing">Testing</a>
+                    <a href="#training">Training</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <button class="nav-button" data-submenu="migration-tools">
+                    <i class="icon">🛠️</i>
+                    Tools for Migration Activities
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="submenu" id="migration-tools">
+                    <a href="#opening-balance" class="inactive-link">Opening Balance Initiate</a>
+                    <a href="#trial-balance-migration" class="inactive-link">Trial Balance Migration</a>
+                    <a href="#gl-transactions" class="inactive-link">GL Transactions Migration</a>
+                    <a href="#trial-balance-validation" class="inactive-link">Trial Balance Validation</a>
+                    <a href="#dimension-validation" class="inactive-link">Dimension wise TB Validation</a>
+                    <a href="https://analytixonline.sharepoint.com/:u:/r/sites/FinanceAccounts/ACCTSTeam15%20%20Nikhil/SAGE%20Intacct%20Implementation/Sage%20Implementation/Z%20Madhav/AUTOMATION%20BY%20MR/MDM_Excel_Automation.html?csf=1&web=1&e=Ho8pq1" target="_blank">MDM Mapping</a>
+                    <a href="https://analytixonline.sharepoint.com/:u:/r/sites/FinanceAccounts/ACCTSTeam15%20%20Nikhil/SAGE%20Intacct%20Implementation/Sage%20Implementation/Z%20Madhav/AUTOMATION%20BY%20MR/Bank_GJ_Entry_Tool%20Ver%201.2.html?csf=1&web=1&e=p405GI" target="_blank">Banking GJ Entry Generation</a>
+                    <a href="https://analytixonline-my.sharepoint.com/personal/madhusudan_rupala_analytix_com/SitePages/Standard-Operating-Procedures-(SOPs).aspx" target="_blank">SOP</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="main-content">
+        <div class="form-container">
+            <h2 class="form-title">📈 Project Status</h2>
+            
+            <!-- Client Selection -->
+            <div class="form-group" id="clientSelectionContainer">
+                <label for="clientSelect" class="form-label">Select Client *</label>
+                <select id="clientSelect" name="clientSelect" class="form-select" required>
+                    <option value="">Choose a client...</option>
+                </select>
+            </div>
+
+            <!-- Client Information Display -->
+            <div id="clientInfoSection" class="hidden">
+                <div class="client-info">
+                    <h3 style="color: var(--electrolux-blue); margin-bottom: 1rem;">🏢 Client Information</h3>
+                    <div class="info-grid" id="clientInfoGrid">
+                        <!-- Client info will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Project Tracker Section -->
+                <div class="tracker-section">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h3 style="color: var(--electrolux-blue);">📊 Project Tracker Status</h3>
+                        <button id="updateTrackerBtn" class="btn btn-primary" style="display: none;">
+                            ✏️ Update Tracker
+                        </button>
+                    </div>
+                    
+                    <div class="tracker-grid" id="trackerGrid">
+                        <!-- Tracker items will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="form-buttons" id="actionButtons" style="display: none;">
+                    <button id="saveChanges" class="btn btn-success">
+                        💾 Save Changes
+                    </button>
+                    <button id="cancelChanges" class="btn btn-secondary">
+                        ❌ Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Intacct Implementation Project Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
